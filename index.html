@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV DADE PERSADATAMA - Konstruksi Gedung Kesehatan</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://ik.imagekit.io/xcl991/BG-Creative-1');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(45deg, #FF6B6B, #4ECDC4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+        
+        .btn-gradient {
+            background: linear-gradient(45deg, #FF6B6B, #4ECDC4);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-gradient:hover {
+            background: linear-gradient(45deg, #4ECDC4, #FF6B6B);
+            transform: scale(1.05);
+        }
+        
+        .section-bg {
+            background-color: rgba(255, 255, 255, 0.95);
+        }
+        
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .meta-ads-accent {
+            color: #1877F2;
+        }
+        
+        .meta-ads-bg {
+            background-color: #1877F2;
+        }
+        
+        .whatsapp-accent {
+            color: #25D366;
+        }
+        
+        .whatsapp-bg {
+            background-color: #25D366;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .float-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        
+        .modal-content {
+            background-color: #fff;
+            margin: 5% auto;
+            padding: 20px;
+            border-radius: 8px;
+            width: 90%;
+            max-width: 800px;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        
+        .close:hover {
+            color: #000;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white shadow-lg z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="text-2xl font-bold gradient-text">CV DADE PERSADATAMA</div>
+            </div>
+            <div class="hidden md:flex space-x-6">
+                <a href="#home" class="text-gray-700 hover:text-blue-500 transition">Beranda</a>
+                <a href="#about" class="text-gray-700 hover:text-blue-500 transition">Tentang Kami</a>
+                <a href="#services" class="text-gray-700 hover:text-blue-500 transition">Layanan</a>
+                <a href="#meta-ads" class="text-gray-700 hover:text-blue-500 transition meta-ads-accent font-bold">Meta Ads</a>
+                <a href="#portfolio" class="text-gray-700 hover:text-blue-500 transition">Portfolio</a>
+                <a href="#contact" class="text-gray-700 hover:text-blue-500 transition">Kontak</a>
+            </div>
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-700 hover:text-blue-500 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white">
+            <div class="px-4 py-2 space-y-2">
+                <a href="#home" class="block text-gray-700 hover:text-blue-500 transition">Beranda</a>
+                <a href="#about" class="block text-gray-700 hover:text-blue-500 transition">Tentang Kami</a>
+                <a href="#services" class="block text-gray-700 hover:text-blue-500 transition">Layanan</a>
+                <a href="#meta-ads" class="block text-gray-700 hover:text-blue-500 transition meta-ads-accent font-bold">Meta Ads</a>
+                <a href="#portfolio" class="block text-gray-700 hover:text-blue-500 transition">Portfolio</a>
+                <a href="#contact" class="block text-gray-700 hover:text-blue-500 transition">Kontak</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg min-h-screen flex items-center justify-center text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 text-shadow float-animation">CV DADE PERSADATAMA</h1>
+            <h2 class="text-3xl md:text-4xl mb-8 text-shadow">Konstruksi Gedung Kesehatan Profesional</h2>
+            <p class="text-xl md:text-2xl mb-10 max-w-3xl mx-auto text-shadow">Membangun infrastruktur kesehatan berkualitas dengan sentuhan kreatif dan strategi pemasaran digital yang efektif melalui Meta Ads</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#contact" class="btn-gradient text-white font-bold py-3 px-8 rounded-full text-lg">Hubungi Kami</a>
+                <a href="#meta-ads" class="meta-ads-bg text-white font-bold py-3 px-8 rounded-full text-lg hover:bg-blue-600 transition">Meta Ads Expert</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 section-bg">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12 gradient-text">Tentang <span class="text-gray-800">CV DADE PERSADATAMA</span></h2>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <p class="text-lg mb-6 text-gray-700">
+                        <strong>CV DADE PERSADATAMA</strong> adalah perusahaan konstruksi terkemuka yang berfokus pada pembangunan gedung kesehatan berkualitas tinggi. Dengan pengalaman bertahun-tahun, kami telah membantu berbagai institusi kesehatan untuk memiliki fasilitas yang memadai dan sesuai standar.
+                    </p>
+                    <p class="text-lg mb-6 text-gray-700">
+                        Keunggulan kami terletak pada pendekatan kreatif dalam desain dan pemanfaatan strategi pemasaran digital melalui Meta Ads untuk mempromosikan proyek-proyek kami kepada audiens yang tepat.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4 mt-8">
+                        <div class="text-center">
+                            <div class="text-4xl font-bold text-blue-500 mb-2">50+</div>
+                            <div class="text-gray-600">Proyek Selesai</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-4xl font-bold text-green-500 mb-2">100%</div>
+                            <div class="text-gray-600">Kepuasan Klien</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-lg card-hover">
+                    <h3 class="text-2xl font-bold mb-6 text-gray-800">Informasi Perusahaan</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <i class="fas fa-building text-blue-500 mt-1 mr-4"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Nama</h4>
+                                <p class="text-gray-600">CV DADE PERSADATAMA</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-red-500 mt-1 mr-4"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Alamat</h4>
+                                <p class="text-gray-600">BUNTU, Desa/Kelurahan Tarongko, Kec. Makale, Kab. Tana Toraja, Provinsi Sulawesi Selatan</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-phone text-green-500 mt-1 mr-4"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Telepon</h4>
+                                <p class="text-gray-600">085285703497</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-envelope text-purple-500 mt-1 mr-4"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Email</h4>
+                                <p class="text-gray-600">info@dadepersadatama.co.id</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12 gradient-text">Layanan Kami</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-lg card-hover text-center">
+                    <div class="text-5xl mb-6 text-blue-500">
+                        <i class="fas fa-hospital"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-800">Konstruksi Rumah Sakit</h3>
+                    <p class="text-gray-600">Perencanaan dan pembangunan rumah sakit dengan standar internasional, desain fungsional, dan infrastruktur medis yang lengkap.</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-lg card-hover text-center">
+                    <div class="text-5xl mb-6 text-green-500">
+                        <i class="fas fa-clinic-medical"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-800">Klinik & Puskesmas</h3>
+                    <p class="text-gray-600">Pembangunan fasilitas kesehatan primer dengan desain yang efisien dan nyaman untuk pasien serta tenaga medis.</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-lg card-hover text-center">
+                    <div class="text-5xl mb-6 text-purple-500">
+                        <i class="fas fa-vial"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-800">Laboratorium Medis</h3>
+                    <p class="text-gray-600">Konstruksi laboratorium dengan sistem ventilasi, keamanan, dan layout yang sesuai standar penelitian medis.</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-lg card-hover text-center">
+                    <div class="text-5xl mb-6 text-red-500">
+                        <i class="fas fa-tooth"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-800">Klinik Gigi & Spesialis</h3>
+                    <p class="text-gray-600">Desain dan pembangunan klinik gigi serta fasilitas spesialis dengan peralatan medis yang terintegrasi.</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-lg card-hover text-center">
+                    <div class="text-5xl mb-6 text-yellow-500">
+                        <i class="fas fa-store-alt"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-800">Apotek & Optik</h3>
+                    <p class="text-gray-600">Pembangunan ruang ritel kesehatan dengan desain modern dan nyaman untuk pelanggan.</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-lg card-hover text-center">
+                    <div class="text-5xl mb-6 text-indigo-500">
+                        <i class="fas fa-warehouse"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-800">Gudang Farmasi</h3>
+                    <p class="text-gray-600">Konstruksi fasilitas penyimpanan obat dengan sistem pengatur suhu dan keamanan yang sesuai standar.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meta Ads Section -->
+    <section id="meta-ads" class="py-20 section-bg">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12">Keahlian <span class="meta-ads-accent">Meta Ads</span> Kami</h2>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="bg-white p-8 rounded-lg shadow-lg">
+                        <h3 class="text-2xl font-bold mb-6 text-gray-800">Strategi Pemasaran Digital untuk Konstruksi</h3>
+                        <p class="text-lg mb-6 text-gray-700">
+                            Di <strong>CV DADE PERSADATAMA</strong>, kami tidak hanya ahli dalam konstruksi gedung kesehatan, tetapi juga dalam mempromosikan proyek kami melalui Meta Ads. Kami memahami bahwa industri konstruksi memerlukan pendekatan pemasaran yang berbeda dan lebih tertarget.
+                        </p>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <i class="fab fa-facebook text-blue-600 text-2xl mr-4 mt-1"></i>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">Facebook Ads</h4>
+                                    <p class="text-gray-600">Kampanye iklan yang tertarget untuk mencapai investor, mitra, dan klien potensial di industri kesehatan.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fab fa-instagram text-pink-600 text-2xl mr-4 mt-1"></i>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">Instagram Ads</h4>
+                                    <p class="text-gray-600">Visualisasi proyek yang menarik untuk membangun citra brand dan kepercayaan klien.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-chart-line text-green-600 text-2xl mr-4 mt-1"></i>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">Analitik & Optimasi</h4>
+                                    <p class="text-gray-600">Pemantauan kinerja iklan dan optimasi berkelanjutan untuk ROI maksimal.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="bg-white p-8 rounded-lg shadow-lg">
+                        <h3 class="text-2xl font-bold mb-6 text-gray-800">Keunggulan Meta Ads Kami</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="meta-ads-bg text-white rounded-full w-10 h-10 flex items-center justify-center mr-4 flex-shrink-0">
+                                    <i class="fas fa-bullseye"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">Targeting Presisi</h4>
+                                    <p class="text-gray-600">Kami menargetkan decision maker di industri kesehatan, investor properti, dan pemerintah daerah.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="meta-ads-bg text-white rounded-full w-10 h-10 flex items-center justify-center mr-4 flex-shrink-0">
+                                    <i class="fas fa-dollar-sign"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">Biaya Efektif</h4>
+                                    <p class="text-gray-600">Strategi bidding yang optimal untuk mendapatkan hasil maksimal dengan anggaran yang efisien.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="meta-ads-bg text-white rounded-full w-10 h-10 flex items-center justify-center mr-4 flex-shrink-0">
+                                    <i class="fas fa-palette"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">Kreatif Berkualitas</h4>
+                                    <p class="text-gray-600">Konten visual yang menarik dan profesional untuk menampilkan portofolio proyek kami.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="meta-ads-bg text-white rounded-full w-10 h-10 flex items-center justify-center mr-4 flex-shrink-0">
+                                    <i class="fas fa-sync-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">Optimasi Berkelanjutan</h4>
+                                    <p class="text-gray-600">Pemantauan dan penyesuaian kampanye secara berkala untuk meningkatkan performa.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12 text-center">
+                <a href="#contact" class="meta-ads-bg text-white font-bold py-3 px-8 rounded-full text-lg hover:bg-blue-600 transition">Konsultasi Meta Ads Gratis</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12 gradient-text">Portfolio Kami</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
+                    <div class="h-48 bg-blue-500 flex items-center justify-center">
+                        <i class="fas fa-hospital text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">Rumah Sakit Harapan Bunda</h3>
+                        <p class="text-gray-600 mb-4">Pembangunan rumah sakit tipe C dengan 100 tempat tidur di Makassar.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500">Selesai: 2023</span>
+                            <button class="text-blue-500 hover:text-blue-700">
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
+                    <div class="h-48 bg-green-500 flex items-center justify-center">
+                        <i class="fas fa-clinic-medical text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">Klinik Pratama Sehat</h3>
+                        <p class="text-gray-600 mb-4">Renovasi dan ekspansi klinik dengan fasilitas laboratorium dan apotek.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500">Selesai: 2023</span>
+                            <button class="text-blue-500 hover:text-blue-700">
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
+                    <div class="h-48 bg-purple-500 flex items-center justify-center">
+                        <i class="fas fa-vial text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">Lab Diagnostik Tora</h3>
+                        <p class="text-gray-600 mb-4">Konstruksi laboratorium medis dengan standar BSL-2 di Tana Toraja.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500">Selesai: 2022</span>
+                            <button class="text-blue-500 hover:text-blue-700">
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <a href="#contact" class="btn-gradient text-white font-bold py-3 px-8 rounded-full text-lg">Lihat Semua Portfolio</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 section-bg">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12 gradient-text">Hubungi <span class="text-gray-800">CV DADE PERSADATAMA</span></h2>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <div class="bg-white p-8 rounded-lg shadow-lg">
+                        <h3 class="text-2xl font-bold mb-6 text-gray-800">Kirim Pesan</h3>
+                        <form id="contactForm">
+                            <div class="mb-6">
+                                <label for="name" class="block text-gray-700 font-semibold mb-2">Nama Lengkap</label>
+                                <input type="text" id="name" name="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500" required>
+                            </div>
+                            <div class="mb-6">
+                                <label for="email" class="block text-gray-700 font-semibold mb-2">Email</label>
+                                <input type="email" id="email" name="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500" required>
+                            </div>
+                            <div class="mb-6">
+                                <label for="phone" class="block text-gray-700 font-semibold mb-2">Nomor Telepon</label>
+                                <input type="tel" id="phone" name="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500" required>
+                            </div>
+                            <div class="mb-6">
+                                <label for="service" class="block text-gray-700 font-semibold mb-2">Layanan yang Dibutuhkan</label>
+                                <select id="service" name="service" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500" required>
+                                    <option value="">Pilih Layanan</option>
+                                    <option value="rumah-sakit">Konstruksi Rumah Sakit</option>
+                                    <option value="klinik">Klinik & Puskesmas</option>
+                                    <option value="laboratorium">Laboratorium Medis</option>
+                                    <option value="klinik-gigi">Klinik Gigi & Spesialis</option>
+                                    <option value="apotek">Apotek & Optik</option>
+                                    <option value="gudang">Gudang Farmasi</option>
+                                    <option value="meta-ads">Konsultasi Meta Ads</option>
+                                </select>
+                            </div>
+                            <div class="mb-6">
+                                <label for="message" class="block text-gray-700 font-semibold mb-2">Pesan</label>
+                                <textarea id="message" name="message" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500" required></textarea>
+                            </div>
+                            <button type="submit" class="btn-gradient text-white font-bold py-3 px-8 rounded-full text-lg w-full">Kirim Pesan</button>
+                        </form>
+                    </div>
+                </div>
+                <div>
+                    <div class="bg-white p-8 rounded-lg shadow-lg mb-8">
+                        <h3 class="text-2xl font-bold mb-6 text-gray-800">Informasi Kontak</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <i class="fas fa-building text-blue-500 mt-1 mr-4 text-xl"></i>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">Perusahaan</h4>
+                                    <p class="text-gray-600">CV DADE PERSADATAMA</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-map-marker-alt text-red-500 mt-1 mr-4 text-xl"></i>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">Alamat</h4>
+                                    <p class="text-gray-600">BUNTU, Desa/Kelurahan Tarongko, Kec. Makale, Kab. Tana Toraja, Provinsi Sulawesi Selatan</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-phone text-green-500 mt-1 mr-4 text-xl"></i>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">Telepon</h4>
+                                    <p class="text-gray-600">085285703497</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-envelope text-purple-500 mt-1 mr-4 text-xl"></i>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">Email</h4>
+                                    <p class="text-gray-600">info@dadepersadatama.co.id</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-lg">
+                        <h3 class="text-2xl font-bold mb-6 text-gray-800">Jam Operasional</h3>
+                        <div class="space-y-2">
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Senin - Jumat</span>
+                                <span class="font-semibold text-gray-800">08:00 - 17:00</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Sabtu</span>
+                                <span class="font-semibold text-gray-800">08:00 - 15:00</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Minggu</span>
+                                <span class="font-semibold text-gray-800">Tutup</span>
+                            </div>
+                        </div>
+                        <div class="mt-6">
+                            <a href="https://wa.me/6285285703497" class="whatsapp-bg text-white font-bold py-3 px-8 rounded-full text-lg w-full text-center block hover:bg-green-600 transition">
+                                <i class="fab fa-whatsapp mr-2"></i> Chat via WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4 gradient-text">CV DADE PERSADATAMA</h3>
+                    <p class="text-gray-300">Konstruksi Gedung Kesehatan Profesional dengan pendekatan kreatif dan strategi pemasaran digital yang efektif.</p>
+                </div>
+                <div>
+                    <h4 class="text-xl font-semibold mb-4">Layanan</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="#services" class="hover:text-white transition">Konstruksi Rumah Sakit</a></li>
+                        <li><a href="#services" class="hover:text-white transition">Klinik & Puskesmas</a></li>
+                        <li><a href="#services" class="hover:text-white transition">Laboratorium Medis</a></li>
+                        <li><a href="#services" class="hover:text-white transition">Klinik Gigi & Spesialis</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xl font-semibold mb-4">Meta Ads</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="#meta-ads" class="hover:text-white transition">Facebook Ads</a></li>
+                        <li><a href="#meta-ads" class="hover:text-white transition">Instagram Ads</a></li>
+                        <li><a href="#meta-ads" class="hover:text-white transition">Analitik & Optimasi</a></li>
+                        <li><a href="#meta-ads" class="hover:text-white transition">Konsultasi Gratis</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xl font-semibold mb-4">Kontak</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><i class="fas fa-phone mr-2"></i> 085285703497</li>
+                        <li><i class="fas fa-envelope mr-2"></i> info@dadepersadatama.co.id</li>
+                        <li><i class="fas fa-map-marker-alt mr-2"></i> Tana Toraja, Sulawesi Selatan</li>
+                    </ul>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="#" class="text-gray-300 hover:text-white transition">
+                            <i class="fab fa-facebook text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white transition">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white transition">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="https://wa.me/6285285703497" class="text-gray-300 hover:text-white transition">
+                            <i class="fab fa-whatsapp text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-300">&copy; 2024 CV DADE PERSADATAMA. Hak Cipta Dilindungi.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" id="privacy-link" class="text-gray-300 hover:text-white transition">Kebijakan Privasi</a>
+                    <a href="#" id="terms-link" class="text-gray-300 hover:text-white transition">Syarat & Ketentuan</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Privacy Policy Modal -->
+    <div id="privacy-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 class="text-3xl font-bold mb-6 gradient-text">Kebijakan Privasi</h2>
+            <div class="text-gray-700 space-y-4">
+                <p>
+                    Selamat datang di Kebijakan Privasi <strong>CV DADE PERSADATAMA</strong>. Halaman ini menjelaskan bagaimana kami mengumpulkan, menggunakan, dan melindungi informasi pribadi Anda saat menggunakan situs web kami.
+                </p>
+                
+                <h3 class="text-xl font-bold mt-6 mb-3">1. Informasi yang Kami Kumpulkan</h3>
+                <p>
+                    Kami dapat mengumpulkan informasi pribadi yang Anda berikan secara sukarela melalui formulir kontak di situs web kami, termasuk nama, alamat email, nomor telepon, dan pesan Anda.
+                </p>
+                
+                <h3 class="text-xl font-bold mt-6 mb-3">2. Penggunaan Informasi</h3>
+                <p>
+                    Informasi yang kami kumpulkan digunakan untuk:
+                </p>
+                <ul class="list-disc pl-6">
+                    <li>Merespons pertanyaan dan permintaan Anda</li>
+                    <li>Memberikan informasi tentang layanan konstruksi kami</li>
+                    <li>Mengirim penawaran dan promosi terkait layanan kami (dengan persetujuan Anda)</li>
+                    <li>Meningkatkan situs web dan layanan kami</li>
+                </ul>
+                
+                <h3 class="text-xl font-bold mt-6 mb-3">3. Berbagi Informasi</h3>
+                <p>
+                    Kami tidak menjual, menukar, atau mentransfer informasi pribadi Anda kepada pihak ketiga tanpa persetujuan Anda, kecuali dalam keadaan berikut:
+                </p>
+                <ul class="list-disc pl-6">
+                    <li>Untuk mematuhi hukum atau perintah pengadilan</li>
+                    <li>Untuk melindungi hak, properti, atau keselamatan <strong>CV DADE PERSADATAMA</strong> atau pelanggan kami</li>
+                    <li>Dengan mitra tepercaya yang membantu kami mengoperasikan situs web atau melakukan bisnis kami</li>
+                </ul>
+                
+                <h3 class="text-xl font-bold mt-6 mb-3">4. Keamanan Informasi</h3>
+                <p>
+                    Kami mengimplementasikan langkah-langkah keamanan yang wajar untuk melindungi informasi pribadi Anda dari akses, penggunaan, atau perubahan yang tidak sah.
+                </p>
+                
+                <h3 class="text-xl font-bold mt-6 mb-3">5. Kebijakan Meta Ads</h3>
+                <p>
+                    Situs web kami menggunakan Meta Ads (Facebook & Instagram) untuk tujuan pemasaran. Ketika Anda berinteraksi dengan iklan kami, Meta dapat mengumpulkan data tentang perilaku Anda sesuai dengan kebijakan privasi mereka. Kami tidak mengontrol praktik privasi Meta dan Anda harus meninjau kebijakan privasi mereka.
+                </p>
+                
+                <h3 class="text-xl font-bold mt-6 mb-3">6. Cookies</h3>
+                <p>
+                    Situs web kami dapat menggunakan cookies untuk meningkatkan pengalaman pengguna. Cookies adalah file teks kecil yang disimpan di browser Anda. Anda dapat menonaktifkan cookies melalui pengaturan browser Anda.
+                </p>
+                
+                <h3 class="text-xl font-bold mt-6 mb-3">7. Perubahan Kebijakan Privasi</h3>
+                <p>
+                    <strong>CV DADE PERSADATAMA</strong> berhak memperbarui kebijakan privasi ini dari waktu ke waktu. Perubahan akan diposting di halaman ini dengan tanggal revisi terbaru.
+                </p>
+                
+                <h3 class="text-xl font-bold mt-6 mb-3">8. Kontak Kami</h3>
+                <p>
+                    Jika Anda memiliki pertanyaan tentang kebijakan privasi ini, silakan hubungi kami:
+                </p>
+                <ul class="list-disc pl-6">
+                    <li>Email: info@dadepersadatama.co.id</li>
+                    <li>Telepon: 085285703497</li>
+                    <li>Alamat: BUNTU, Desa/Kelurahan Tarongko, Kec. Makale, Kab. Tana Toraja, Provinsi Sulawesi Selatan</li>
+                </ul>
+                
+                <p class="mt-6">
+                    Kebijakan Privasi ini berlaku efektif sejak tanggal 1 Januari 2024.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Terms and Conditions Modal -->
+    <div id="terms-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 class="text-3xl font-bold mb-6 gradient-text">Syarat & Ketentuan</h2>
+            <div class="text-gray-700 space-y-4">
+                <p>
+                    Selamat datang di Syarat & Ketentuan <strong>CV DADE PERSADATAMA</strong>. Dokumen ini mengatur penggunaan situs web kami dan layanan yang kami tawarkan.
+                </p>
+                
+                <h3 class="text-xl font-bold mt-6 mb-3">1. Penerimaan Syarat</h3>
+                <p>
+                    Dengan mengakses dan menggunakan situs web <strong>CV DADE PERSADATAMA</strong>, Anda menerima dan menyetujui untuk terikat oleh Syarat & Ketentuan ini.
+                </p>
+                
+                <h3 class="text-xl font-bold mt-6 mb-3">2. Deskripsi Layanan</h3>
+                <p>
+                    <strong>CV DADE PERSADATAMA</strong> menyediakan layanan konstruksi gedung kesehatan, termasuk namun tidak terbatas pada:
+                </p>
+                <ul class="list-disc pl-6">
+                    <li>Konstruksi Rumah Sakit</li>
+                    <li>Klinik & Puskesmas</li>
+                    <li>Laboratorium Medis</li>
+                    <li>Klinik Gigi & Spesialis</li>
+                    <li>Apotek & Optik</li>
+                    <li>Gudang Farmasi</li>
+                    <li>Konsultasi Meta Ads untuk industri konstruksi</li>
+                </ul>
+                
+                <h3 class="text-xl font-bold mt-6 mb-3">3. Penggunaan Situs Web</h3>
+                <p>
+                    Anda setuju untuk menggunakan situs web ini hanya untuk tujuan yang sah dan sesuai hukum. Anda dilarang:
+                </p>
+                <ul class="list-disc pl-6">
+                    <li>Menggunakan situs web untuk tujuan ilegal atau tidak sah</li>
+                    <li>Mengirim atau mentransfer malware atau virus ke situs web</li>
+                    <li>Mencoba mendapatkan akses tidak sah ke sistem kami</li>
+                    <li>Mengganggu atau mengganggu pengguna lain atau server</li>
+                </ul>
+                
+                <h3 class="text-xl font-bold mt-6 mb-3">4. Hak Kekayaan Intelektual</h3>
+                <p>
+                    Semua konten, merek dagang, logo, dan materi lain di situs web ini adalah milik <strong>CV DADE PERSADATAMA</strong> atau mitra kami dan dilindungi oleh hukum hak kekayaan intelektual.
+                </p>
+                
+                <h3 class="text-xl font-bold mt-6 mb-3">5. Layanan Meta Ads</h3>
+                <p>
+                    Untuk layanan konsultasi Meta Ads kami:
+                </p>
+                <ul class="list-disc pl-6">
+                    <li>Kami berusaha memberikan strategi pemasaran yang efektif namun tidak menjamin hasil tertentu</li>
+                    <li>Biaya iklan di platform Meta tidak termasuk dalam biaya jasa kami</li>
+                    <li>Klien bertanggung jawab untuk mematuhi kebijakan iklan Meta</li>
+                    <li>Kami berhak menolak membuat kampanye yang melanggar hukum atau etika</li>
+                </ul>
+                
+                <h3 class="text-xl font-bold mt-6 mb-3">6. Pembayaran dan Biaya</h3>
+                <p>
+                    Untuk layanan konstruksi:
+                </p>
+                <ul class="list-disc pl-6">
+                    <li>Biaya akan dijelaskan dalam penawaran tertulis</li>
+                    <li>Pembayaran dilakukan sesuai dengan jadwal yang disepakati</li>
+                    <li>Perubahan proyek mungkin mengakibatkan penyesuaian biaya</li>
+                    <li>Biaya tambahan di luar lingkup pekerjaan akan disetujui terlebih dahulu</li>
+                </ul>
+                
+                <h3 class="text-xl font-bold mt-6 mb-3">7. Pembatalan dan Pengembalian Dana</h3>
+                <p>
+                    Kebijakan pembatalan:
+                </p>
+                <ul class="list-disc pl-6">
+                    <li>Pembatalan sebelum pekerjaan dimulai: Pengembalian dana 75%</li>
+                    <li>Pembatalan setelah pekerjaan dimulai: Pengembalian dana proporsional</li>
+                    <li>Biaya konsultasi Meta Ads tidak dapat dikembalikan setelah layanan diberikan</li>
+                </ul>
+                
+                <h3 class="text-xl font-bold mt-6 mb-3">8. Penafian Jaminan</h3>
+                <p>
+                    Situs web dan layanan kami disediakan "sebagaimana adanya" tanpa jaminan apa pun, baik tersurat maupun tersirat. Kami tidak menjamin bahwa situs web akan bebas dari kesalahan atau gangguan.
+                </p>
+                
+                <h3 class="text-xl font-bold mt-6 mb-3">9. Batasan Tanggung Jawab</h3>
+                <p>
+                    <strong>CV DADE PERSADATAMA</strong> tidak bertanggung jawab atas kerugian langsung, tidak langsung, insidental, atau konsekuensial yang timbul dari penggunaan situs web atau layanan kami.
+                </p>
+                
+                <h3 class="text-xl font-bold mt-6 mb-3">10. Hukum yang Berlaku</h3>
+                <p>
+                    Syarat & Ketentuan ini diatur oleh dan ditafsirkan sesuai dengan hukum Republik Indonesia. Setiap sengketa akan diselesaikan melalui perundingan atau, jika tidak dapat diselesaikan, melalui pengadilan yang berwenang di Indonesia.
+                </p>
+                
+                <h3 class="text-xl font-bold mt-6 mb-3">11. Perubahan Syarat & Ketentuan</h3>
+                <p>
+                    <strong>CV DADE PERSADATAMA</strong> berhak mengubah Syarat & Ketentuan ini dari waktu ke waktu. Perubahan akan diposting di halaman ini dengan tanggal revisi terbaru.
+                </p>
+                
+                <h3 class="text-xl font-bold mt-6 mb-3">12. Kontak Kami</h3>
+                <p>
+                    Jika Anda memiliki pertanyaan tentang Syarat & Ketentuan ini, silakan hubungi kami:
+                </p>
+                <ul class="list-disc pl-6">
+                    <li>Email: info@dadepersadatama.co.id</li>
+                    <li>Telepon: 085285703497</li>
+                    <li>Alamat: BUNTU, Desa/Kelurahan Tarongko, Kec. Makale, Kab. Tana Toraja, Provinsi Sulawesi Selatan</li>
+                </ul>
+                
+                <p class="mt-6">
+                    Syarat & Ketentuan ini berlaku efektif sejak tanggal 1 Januari 2024.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    // Close mobile menu if open
+                    document.getElementById('mobile-menu').classList.add('hidden');
+                }
+            });
+        });
+
+        // Form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const service = document.getElementById('service').value;
+            const message = document.getElementById('message').value;
+            
+            // Create WhatsApp message
+            const whatsappMessage = `Halo, saya ${name} (${email}, ${phone}) tertarik dengan layanan ${service}. Pesan: ${message}`;
+            
+            // Open WhatsApp with pre-filled message
+            window.open(`https://wa.me/6285285703497?text=${encodeURIComponent(whatsappMessage)}`, '_blank');
+            
+            // Show success message
+            const formContainer = this.parentElement;
+            const successMessage = document.createElement('div');
+            successMessage.className = 'bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mt-4';
+            successMessage.innerHTML = '<strong>Terima kasih!</strong> Pesan Anda telah diterima. Kami akan segera menghubungi Anda melalui WhatsApp.';
+            formContainer.appendChild(successMessage);
+            
+            // Reset form
+            this.reset();
+            
+            // Remove success message after 5 seconds
+            setTimeout(() => {
+                successMessage.remove();
+            }, 5000);
+        });
+
+        // Modal functionality
+        const privacyModal = document.getElementById('privacy-modal');
+        const termsModal = document.getElementById('terms-modal');
+        const privacyLink = document.getElementById('privacy-link');
+        const termsLink = document.getElementById('terms-link');
+        const closeButtons = document.getElementsByClassName('close');
+
+        // Open privacy modal
+        privacyLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            privacyModal.style.display = 'block';
+        });
+
+        // Open terms modal
+        termsLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            termsModal.style.display = 'block';
+        });
+
+        // Close modals
+        for (let i = 0; i < closeButtons.length; i++) {
+            closeButtons[i].addEventListener('click', function() {
+                privacyModal.style.display = 'none';
+                termsModal.style.display = 'none';
+            });
+        }
+
+        // Close modals when clicking outside
+        window.addEventListener('click', function(event) {
+            if (event.target == privacyModal) {
+                privacyModal.style.display = 'none';
+            }
+            if (event.target == termsModal) {
+                termsModal.style.display = 'none';
+            }
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = 1;
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all sections
+        document.querySelectorAll('section').forEach(section => {
+            section.style.opacity = 0;
+            section.style.transform = 'translateY(20px)';
+            section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
